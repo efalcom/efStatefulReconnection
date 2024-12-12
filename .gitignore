@@ -3,3 +3,5 @@
 obj/
 bin/
 *.csproj.user
+src/StatefulReconnection/Properties/PublishProfiles/FolderProfile.pubxml
+src/StatefulReconnection/Properties/PublishProfiles/FolderProfile.pubxml.user
