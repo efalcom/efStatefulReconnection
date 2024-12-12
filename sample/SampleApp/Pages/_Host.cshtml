@@ -29,6 +29,18 @@
         <a class="dismiss">🗙</a>
     </div>
 
-    <script src="_framework/blazor.server.js"></script>
+    <script src="_framework/blazor.server.js" autostart="false"></script>
+    
+    @* CA: El siguiente script se agrega para poder iniciar manualmente el servidor Blazor con parámetros personalizados.
+           Notar que para que esto funcione, se debe indicar el parámetro "autostart=false" en el script blazor.server.js, mas arriba.
+    *@
+    <script>
+        Blazor.start({
+            reconnectionOptions: {
+                maxRetries: 60 * 60 * 24, // 86400 seconds = 24 hours
+                retryIntervalMilliseconds: 1000
+            }
+        });
+    </script>
 </body>
 </html>
